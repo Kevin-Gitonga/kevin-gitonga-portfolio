@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kevin Gitonga — Portfolio
 
-## Getting Started
+Personal portfolio for Kevin Gitonga, Data Engineering & Analytics Leader.
 
-First, run the development server:
+![Desktop screenshot](docs/screenshots/desktop.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router, fully static prerender)
+- TypeScript
+- Tailwind CSS 4
+- Hosted on Vercel
+
+No backend, no tracking or analytics, no paid services.
+
+## Project structure
+
+```text
+src/
+├── app/
+│   ├── layout.tsx            Metadata, fonts, JSON-LD, skip link
+│   ├── page.tsx              Page composition
+│   ├── opengraph-image.tsx   Social preview image (generated at build time)
+│   ├── robots.ts · sitemap.ts
+│   └── icon.svg · apple-icon.png
+├── components/               One component per section (Hero, About, Projects, …)
+├── content/site.ts           All portfolio copy in one place
+└── lib/site-url.ts           Canonical URL resolution
+public/
+├── Kevin-Gitonga-CV.pdf      Downloadable CV
+└── images/                   Portrait and FinFlow dashboard (WebP)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To update copy, edit `src/content/site.ts`. To replace the CV, overwrite
+`public/Kevin-Gitonga-CV.pdf` with the same file name.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run lint
+npm run build
+```
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Optional. Canonical URL for metadata, sitemap and Open Graph (e.g. a custom domain). On Vercel the production URL is detected automatically. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- FinFlow facts are taken from the public
+  [finflow-data-platform](https://github.com/Kevin-Gitonga/finflow-data-platform)
+  repository. FinFlow is an independent portfolio project using synthetic data.
+- Projects B and C are anonymised professional case studies with no public code.
 
-## Deploy on Vercel
+## Licence
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Code: MIT. Personal content (text, CV, photographs) © Kevin Gitonga, all rights reserved.
