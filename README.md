@@ -2,6 +2,10 @@
 
 Personal portfolio for Kevin Gitonga, Data Engineering & Analytics Leader.
 
+**Live site:** https://kevin-gitonga-portfolio.vercel.app
+
+Pushes to `main` deploy to production automatically through Vercel's GitHub integration.
+
 ![Desktop screenshot](docs/screenshots/desktop.jpg)
 
 ## Stack
