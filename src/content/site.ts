@@ -28,7 +28,8 @@ export const about = {
     "I joined AZA Finance as its founding data engineer, when reporting was largely manual. I built the central PostgreSQL warehouse and the pipelines feeding it from scratch, and that platform went on to support operations across 10 countries.",
     "As the platform grew, so did the team. I progressed from Data Engineer to Senior Data Engineer to Data Engineering Technical Lead, growing the function from one engineer to up to seven and introducing the monitoring, CI/CD, code review and maintenance standards that kept it reliable.",
     "I then worked as an independent data engineer at dLocal, contributing to the production implementation of a local analytics platform on AWS Outposts for Egypt, built to meet data-residency requirements.",
-    "Most recently, as Head of Data at Opareta, I led data engineering, BI and analytics: setting technical strategy, shaping architecture and developing the team.",
+    "Most recently, as Head of Data at Opareta, I led data engineering, BI and analytics: owning platform strategy, architecture direction, engineering priorities and delivery coordination, and developing the team.",
+    "Across these roles I have taken data initiatives from planning to production: defining scope, architecture and milestones, coordinating engineers and cross-functional stakeholders, and managing dependencies and competing priorities. Alongside my work, I mentor aspiring data professionals through Analyst Lab and the University of Greenwich mentoring programme.",
   ],
   pillars: [
     {
@@ -40,8 +41,12 @@ export const about = {
       body: "Warehouses, lakehouse-style query layers and cloud infrastructure on AWS and GCP, designed for auditability, cost and data-residency constraints.",
     },
     {
-      title: "Engineering leadership",
-      body: "Hiring, mentoring and setting standards, and aligning data work with executive, product and engineering priorities.",
+      title: "Technical delivery",
+      body: "Scoping initiatives, setting priorities and milestones, and managing technical dependencies and delivery risk, from first design to production.",
+    },
+    {
+      title: "Leadership & mentorship",
+      body: "Hiring, mentoring and setting engineering standards, and aligning data work with executive, product and engineering priorities.",
     },
   ],
 } as const;
@@ -176,9 +181,9 @@ export const experience: Role[] = [
     period: "Aug 2026 – Oct 2026",
     focus: "Leadership",
     points: [
-      "Led the data function across engineering, business intelligence and analytics, owning technical strategy, architecture and delivery priorities.",
+      "Led the data function across engineering, business intelligence and analytics, owning data platform strategy, architecture direction, engineering priorities and delivery coordination.",
       "Managed and developed a three-person data team, overseeing recruitment, onboarding, mentorship and engineering standards.",
-      "Partnered with executive, Product and Engineering leadership to align data initiatives with business priorities and strengthen critical reporting.",
+      "Partnered with executive, Product and Engineering leadership to align data initiatives with business priorities, balancing reporting performance, platform modernisation and engineering standards.",
       "Directed the optimisation of Zambia's site-level operational reporting, with dashboard chart load times of approximately eight seconds during validation.",
       "Defined a data warehouse modernisation strategy, evaluating architectures and developing a proof-of-concept roadmap.",
     ],
@@ -189,7 +194,8 @@ export const experience: Role[] = [
     period: "Jan 2026 – Aug 2026",
     focus: "Cloud data platform",
     points: [
-      "Helped establish Egypt's initial local analytics capability as part of a new-market implementation designed to meet data-residency requirements.",
+      "Helped establish Egypt's initial local analytics capability as part of a new-market implementation designed to meet data-residency requirements, working across data architecture, infrastructure, implementation and deployment.",
+      "Coordinated technical dependencies with application and DataOps teams to support the platform's successful production delivery.",
       "Contributed to the production deployment of the AWS Outposts data platform with Parquet on S3, AWS Glue Data Catalog and Trino; ingestion planning covered approximately 100 application tables.",
       "Developed and supported end-to-end pipelines using Python, SQL, Airflow, AWS DMS, Fivetran, Athena and S3.",
       "Deployed and troubleshot data workloads on Amazon EKS using Kubernetes and ArgoCD, including IAM, connectivity and persistent storage.",
@@ -209,7 +215,8 @@ export const experience: Role[] = [
       "Automated month-end financial reconciliation end to end through SAP and Salesforce integrations, cutting the close cycle from up to 14 days to day one — approximately 93% faster.",
       "Established the data engineering function as its founding engineer and built the central PostgreSQL warehouse and pipelines from scratch, supporting operations across 10 countries.",
       "Replaced predominantly manual reporting with AWS DMS, AWS Glue and Synatic integrations, expanding timely data access across departments.",
-      "Grew and mentored the engineering team from one to up to seven people.",
+      "Led data engineering initiatives from planning through delivery as Technical Lead, defining scope, architecture, priorities and technical deliverables, and coordinating engineers with finance and business stakeholders.",
+      "Grew the engineering team from one to up to seven people, mentoring engineers and developing team capabilities.",
       "Introduced monitoring, CI/CD, code review and ETL maintenance standards to improve consistency and operational reliability.",
     ],
   },
@@ -239,14 +246,59 @@ export const skills = [
   },
   {
     category: "Architecture & Leadership",
-    items: ["Data Strategy", "Platform Architecture", "Team Leadership", "Hiring & Mentorship", "Technical Standards", "Architecture Decision Records", "Stakeholder Management"],
+    items: ["Data Strategy", "Data Platform Architecture", "Cloud Infrastructure & Migration", "Technical Decision-making", "Engineering Team Leadership", "Engineering Standards & QA", "Architecture Decision Records"],
+  },
+  {
+    category: "Delivery & People Development",
+    items: ["Technical Project Delivery", "Scoping & Roadmap Planning", "Milestone & Priority Management", "Risk & Dependency Management", "Cross-functional Stakeholder Management", "Mentorship & Coaching"],
   },
 ] as const;
+
+export const mentorship = {
+  analystLab: {
+    title: "Analyst Lab — Data Engineering Mentorship",
+    context: "Independent mentoring initiative",
+    summary:
+      "A hands-on training environment I designed to help aspiring and entry-level data professionals build practical data and analytics engineering skills against a fictional fintech dataset.",
+    points: [
+      "PostgreSQL and SQL fundamentals, from filtering and aggregation to joins, in a Docker-based local environment.",
+      "Synthetic datasets with deliberately injected data-quality issues, so learners practise judging whether data can be trusted.",
+      "Structured, ticket-based exercises that build up to a business investigation and an operations dashboard in Metabase.",
+      "Work submitted through a Git and GitHub pull-request workflow, with code review, rubric-based feedback and technical guidance.",
+      "Emphasis on analytical thinking: turning a business request into questions, metric definitions, validation and recommendations.",
+    ],
+    curriculum: [
+      "Environment setup",
+      "Filtering & aggregation",
+      "Joins",
+      "Data-trust review",
+      "Business investigation",
+      "Metabase setup",
+      "Operations dashboard",
+    ],
+    tags: ["PostgreSQL 16", "SQL", "Docker Compose", "Metabase", "Python", "Git & GitHub"],
+    note: "Private repository. Learner work and mentee details are kept confidential.",
+  },
+  greenwich: {
+    title: "University of Greenwich | Volunteer Mentor",
+    context: "University mentoring programme · currently mentoring my second student",
+    summary:
+      "I volunteer as a mentor through the University of Greenwich mentoring programme, supporting students in one-to-one conversations alongside my professional work.",
+    points: [
+      "Supporting students with career exploration and professional development.",
+      "Sharing practical knowledge of data engineering, analytics and the technology industry.",
+      "Helping students understand industry expectations and career opportunities.",
+      "Offering guidance on technical growth, career readiness and professional confidence.",
+    ],
+    note: "A voluntary role, separate from my employment. Mentee details remain private.",
+  },
+} as const;
 
 export const navItems = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#mentorship", label: "Mentorship" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ] as const;

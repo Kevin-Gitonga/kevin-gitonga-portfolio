@@ -27,7 +27,7 @@ export function Header() {
           <span className="text-ink transition-colors group-hover:text-coral-soft">{profile.name}</span>
         </a>
 
-        <nav aria-label="Primary" className="hidden md:block">
+        <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -54,7 +54,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex size-10 items-center justify-center rounded-md border border-line text-ink md:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-md border border-line text-ink lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -74,7 +74,7 @@ export function Header() {
         id="mobile-nav"
         aria-label="Mobile"
         hidden={!open}
-        className="border-t border-line/70 bg-navy-950 md:hidden"
+        className="border-t border-line/70 bg-navy-950 lg:hidden"
       >
         <ul className="mx-auto flex max-w-6xl flex-col px-5 py-3">
           {navItems.map((item) => (

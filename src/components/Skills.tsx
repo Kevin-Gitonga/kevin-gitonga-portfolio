@@ -10,14 +10,12 @@ export function Skills() {
       intro="Grouped by discipline, from enterprise ETL and BI to cloud-native data platforms."
       className="border-t border-line/60"
     >
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
-        {skills.map((group, i) => (
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {skills.map((group) => (
           <section
             key={group.category}
             aria-labelledby={`skills-${group.category}`}
-            className={`reveal rounded-xl border border-line bg-navy-900/70 p-6 ${
-              i < 3 ? "lg:col-span-2" : "lg:col-span-3"
-            } ${i === skills.length - 1 ? "sm:col-span-2" : ""}`}
+            className="reveal rounded-xl border border-line bg-navy-900/70 p-6"
           >
             <h3 id={`skills-${group.category}`} className="font-semibold text-ink">
               {group.category}
